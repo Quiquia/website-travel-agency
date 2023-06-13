@@ -30,5 +30,6 @@ html {
 }
 
 .container {
-  /* position: relative; */
+  position: relative;
+  z-index: 2;
 }
