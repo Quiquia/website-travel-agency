@@ -1,0 +1,231 @@
+header {
+  width: 100%;
+  position: fixed;
+  background: var(--col-black1);
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--col-white);
+  padding: 2rem 5%;
+  height: 59px;
+}
+
+header .header-menu {
+  cursor: pointer;
+  border: 1px solid var(--colo-white);
+  padding: 4px 7px;
+  border-radius: 4px;
+}
+
+header .header-logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: var(--col-white);
+}
+
+header .header-logo span {
+  color: var(--col-orange);
+}
+
+header .header-navbar {
+  position: absolute;
+  background: var(--col-black1);
+  top: 100%;
+  left: 0;
+  right: 0;
+  display: none;
+  flex-direction: column;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 2rem;
+}
+
+header .header-navbar a {
+  background: var(--col-black2);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0.5rem;
+}
+
+header .header-navbar a {
+  color: var(--colo-white);
+  font-size: 2rem;
+  /* margin: 0 0.8rem; */
+}
+
+header .header-icons {
+  display: flex;
+  column-gap: 1.5rem;
+}
+
+header .header-icons i,
+header .header-menu i {
+  font-size: 2rem;
+}
+
+header .header-navbar a:hover,
+header .header-icons i:hover {
+  color: var(--col-orange);
+}
+
+/*-------------show menu ------------*/
+header .header-navbar.showMenu {
+  display: flex;
+}
+
+/*----------------- header form search ----------------------*/
+header .search-bar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--col-black1);
+  display: none;
+  align-items: center;
+  column-gap: 1.2rem;
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.2);
+  padding: 1rem 4%;
+}
+
+header .search-bar-container input {
+  flex: 2;
+  padding: 1rem;
+  border-radius: 2px;
+  border: none;
+}
+
+header .search-bar-container label {
+  font-size: 2.5rem;
+}
+
+header .search-bar-container.showSearchMenu {
+  display: flex;
+}
+
+/*------------------------- login form ----------- -----*/
+
+.login-container {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+}
+
+.login-container .login-form {
+  background-color: var(--col-white);
+  width: 50rem;
+  margin: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+}
+
+.login-form .login-form-title {
+  font-size: 3rem;
+  color: var(--col-black3);
+  text-align: center;
+  padding: 1rem 0;
+  text-transform: uppercase;
+}
+
+.login-form .box {
+  width: 100%;
+  margin: 0.6rem 0;
+  padding: 1rem;
+  font-size: 1.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  text-transform: none;
+}
+
+.login-form .box:focus {
+  border-color: var(--col-orange);
+}
+
+.login-form .btn {
+  display: inline-block;
+  margin-top: 1rem;
+  background: var(--col-orange);
+  color: var(--col-white);
+  padding: 0.8rem 3rem;
+  border: 0.2rem solid var(--col-orange);
+  font-size: 1.7rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.login-form .btn:hover {
+  background: rgba(255, 165, 0, 0.2);
+  color: var(--col-orange);
+}
+
+.login-form .btn-remember {
+  font-size: 1.5rem;
+  display: flex;
+  column-gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.login-form p {
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+  color: var(--col-black4);
+}
+
+.login-form p a {
+  color: var(--col-orange);
+}
+
+.login-form p a:hover {
+  color: var(--col-black1);
+  text-decoration: underline;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-container .login-icon-close {
+  position: absolute;
+  top: 2rem;
+  right: 3rem;
+  color: var(--col-white);
+  font-size: 2.7rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+/*-------------show login ------------*/
+
+.login-container.showLoginForm {
+  left: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .header-menu {
+    display: none;
+  }
+
+  header .header-navbar {
+    position: relative;
+    top: 0;
+    border: none;
+    background: none;
+    padding: 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 1.5rem;
+  }
+
+  header .header-navbar a {
+    font-size: 2.2rem;
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
